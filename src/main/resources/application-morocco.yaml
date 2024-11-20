@@ -1,0 +1,6 @@
+economic:
+  basePrice: 5
+  increasedPrice: 6
+  threshold: 5000000000
+  currency: MAD
+  countryName: Morocco
