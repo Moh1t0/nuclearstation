@@ -1,5 +1,6 @@
-package com.javaacademy.nuclearstation;
+package com.javaacademy.nuclearstation.it;
 
+import com.javaacademy.nuclearstation.NuclearStation;
 import com.javaacademy.nuclearstation.departments.EconomicDepartment;
 import com.javaacademy.nuclearstation.departments.ReactorDepartment;
 import com.javaacademy.nuclearstation.departments.SecurityDepartment;
@@ -10,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.TestPropertySource;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

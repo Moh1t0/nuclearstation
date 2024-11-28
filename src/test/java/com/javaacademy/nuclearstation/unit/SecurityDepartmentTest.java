@@ -1,4 +1,4 @@
-package com.javaacademy.nuclearstation;
+package com.javaacademy.nuclearstation.unit;
 
 import com.javaacademy.nuclearstation.departments.SecurityDepartment;
 import org.junit.jupiter.api.Assertions;
