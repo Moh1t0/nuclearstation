@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 
 /**
  * реакторный цех
-*/
+ */
 
 @Component
 @Data

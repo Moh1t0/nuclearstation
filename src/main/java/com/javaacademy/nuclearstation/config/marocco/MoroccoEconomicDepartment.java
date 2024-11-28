@@ -18,18 +18,15 @@ public class MoroccoEconomicDepartment extends EconomicDepartment {
 
     @Override
     public BigDecimal computeYearIncomes(long countElectricity) {
-        BigDecimal totalIncome = BigDecimal.ZERO;
         BigDecimal electricity = BigDecimal.valueOf(countElectricity);
 
         if (electricity.compareTo(moroccoProperty.getThreshold()) > 0) {
             BigDecimal extraElectricity = electricity.subtract(moroccoProperty.getThreshold());
-            totalIncome = moroccoProperty.getThreshold().multiply(moroccoProperty.getBasePrice());
-
-            totalIncome = totalIncome.add(extraElectricity.multiply(moroccoProperty.getIncreasedPrice()));
-        } else {
-            totalIncome = electricity.multiply(moroccoProperty.getBasePrice());
+            BigDecimal totalIncome = moroccoProperty.getThreshold().multiply(moroccoProperty.getBasePrice());
+            return totalIncome.add(electricity.multiply(moroccoProperty.getIncreasedPrice()));
         }
-        return totalIncome;
+        return electricity.multiply(moroccoProperty.getBasePrice());
+
     }
 
     @Override
